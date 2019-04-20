@@ -1,0 +1,40 @@
+/* IMPORTANT: class must not be public. */
+
+import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+
+
+public class TestClass {
+    public static void main(String args[] ) throws Exception {
+        /*/*
+         * Read input from stdin and provide input before running
+*/
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String line = br.readLine();
+        HashMap<Character,Integer> charocc= new HashMap<>();
+        int k=0;
+        for(int i=0;i < line.length();i++)
+        {
+          char temp= line.charAt(i);
+          if(charocc.containsKey(temp))
+          {
+              int y= charocc.get(temp).intValue()+1;
+            charocc.replace(temp, y);
+          }
+          else
+          {
+              k++;
+          charocc.put(temp,1);
+          }
+        }
+        
+        if(k%2 !=0)
+        {
+        System.out.println("IGNORE HIM!");
+        }
+        else
+        System.out.println("CHAT WITH HER!");
+    }
+}

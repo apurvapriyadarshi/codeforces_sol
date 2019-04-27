@@ -1,0 +1,58 @@
+/* package whatever; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+
+    public static void main(String args[] ) throws Exception {
+       
+        Scanner sc = new Scanner(System.in);
+        int tc= sc.nextInt();
+        int [] a= new int[5];
+        for (int i = 0; i < tc; i++) {
+            int ip= sc.nextInt();
+            
+            a[ip]++;
+             }
+        int ans=0;
+       //System.out.println(a[3]); 
+    ans=a[4];
+    
+    ans=ans+ a[3];
+   // System.out.println(ans);
+    if(a[1]!=0 && a[3] !=0)
+    {
+        
+        if(a[3] <= a[1])
+        a[1]=a[1]-a[3];
+        else
+        a[1]=0;
+    }
+    ans=ans+a[2]/2;
+    if(a[2]%2 !=0)
+    {
+    	ans++;
+    	
+    }
+    if(a[1] !=0 && a[2]%2 != 0)
+    {
+        
+        a[1]=a[1]-2;
+ 
+    }
+    
+    
+    ans=ans+a[1]/4;
+    if(a[1]%4 !=0  && a[1]>0)
+    {
+    ans=ans+1;	
+    }
+    System.out.println(ans);
+    }
+
+}

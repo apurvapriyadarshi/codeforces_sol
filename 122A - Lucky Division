@@ -1,0 +1,19 @@
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int i= sc.nextInt();
+        
+       if(i%4 == 0 || i%7 == 0 || i%44 == 0 || i%47 == 0 || i%77 == 0 || i%74 == 0 || i%444 == 0|| i%477 == 0 ||i%474 == 0 ||i%777 == 0 ||i%744 == 0
+       ||i%774== 0||i%747 == 0)
+        System.out.println("YES");
+        else
+        System.out.println("NO");
+
+        
+    }
+}

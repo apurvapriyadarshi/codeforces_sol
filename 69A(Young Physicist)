@@ -1,0 +1,28 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+ public class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int t= sc.nextInt();
+        int sx,sy,sz;
+        sx=sy=sz=0;
+        while(t>0)
+        {
+        	t--;
+        	int x=sc.nextInt();
+        	int y=sc.nextInt();
+        	int z=sc.nextInt();
+        	
+        	sx=sx+x;sy=sy+y;sz=sz+z;
+        }
+        
+        if(sx==0 && sy==0 && sz==0)
+        	System.out.println("YES");
+        else
+        	System.out.println("NO");
+
+        
+    }
+}

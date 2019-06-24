@@ -1,0 +1,22 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+  public class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int p=sc.nextInt();
+        	int m=sc.nextInt();
+        	int nb=sc.nextInt();
+        
+        int snbp=(nb*(nb+1)*p)/2;
+        
+        
+        if(snbp > m)
+        	System.out.println(snbp-m);
+        else
+        	System.out.println("0");
+
+        
+    }
+}

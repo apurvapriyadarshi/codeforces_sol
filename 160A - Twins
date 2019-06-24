@@ -1,0 +1,36 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.Arrays; 
+import java.util.Collections; 
+
+   public class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int p=sc.nextInt();
+    	int a[]= new int[p];
+        int sum=0;
+        for(int i=0;i<p;i++)
+        {
+        int n=sc.nextInt();
+        a[i]=n;
+        sum=sum+n;
+        }
+        Arrays.sort(a);
+        int c=1;
+        int localsum=a[--p];
+        sum -=localsum;
+        //System.out.println(localsum+"+"+sum);
+        while(localsum <= sum)
+        {c++;
+        	localsum += a[--p];
+        	sum -= a[p];
+        //	System.out.println(localsum+"_"+sum);
+        }
+        
+        
+        System.out.println(c);
+
+        
+    }
+}

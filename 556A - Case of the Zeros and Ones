@@ -1,0 +1,25 @@
+
+import java.util.*;
+import java.io.*;
+
+
+public final class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+        String v=sc.next();
+         int n0=0,n1=0;
+        for(int i=0;i<n;i++)
+        {
+            if(v.charAt(i) == '0')
+            {
+            n0++;
+            }
+            else
+            {
+            n1++;
+            }
+        }
+        System.out.println(Math.abs(n0-n1));
+    }
+}
